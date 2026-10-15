@@ -6,12 +6,14 @@ George Jetson's job at Spacely Sprockets was digital index operator: he pressed 
 
 **Page with videos:** https://mikeysklar.github.io/digital-index-operator/
 
+[![How it works](docs/media/closeup.jpg)](docs/media/closeup_how_it_works.mp4)
+
+How it works: the clip holds two pogo pins on opposite corner pads of the switch (click for the video).
+
 | Edge clamp | Hole mount |
 |---|---|
 | [![Edge clamp](docs/media/edge_clamp.jpg)](docs/media/edge_clamp_turntable.mp4) | [![Hole mount](docs/media/hole_mount.jpg)](docs/media/hole_mount_turntable.mp4) |
 | Clamps the nearest board edge. Works on every board. | Screws through a mounting hole (M2.5 Feather, M3 Metro). |
-
-[How it works (video)](docs/media/closeup_how_it_works.mp4): cutaway of the clip on the switch.
 
 ## Files
 

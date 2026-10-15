@@ -33,6 +33,17 @@ footer { margin-top:56px; color:var(--mute); font-size:.85rem; }
 <p class="lede">3D printed clips that hold two pogo pins on a board's RESET or BOOT button, so a test rig can press it with a relay.</p>
 <p>George Jetson's job at Spacely Sprockets was digital index operator: he pressed one button all day. These clips do the same for hardware-in-the-loop testing.</p>
 
+<h2>How it works</h2>
+<figure>
+<a href="media/closeup_how_it_works.mp4"><img src="media/closeup.jpg" alt="Cutaway of the clip seated on a tact switch, pogo pins touching opposite corner pads"></a>
+<figcaption>Cutaway of the clip on the switch. Each glow color marks one pair of pads that are tied together inside the switch. Click for the video.</figcaption>
+</figure>
+<ul>
+<li>The clip registers on the switch body and holds two pogo pins on opposite corner pads. The two pads on each side of a tact switch are tied together inside, so diagonal corners are the two sides of the switch.</li>
+<li>A window over the plunger means the clip itself never presses the button.</li>
+<li>Print <code>bore_coupon.3mf</code> first and set <code>bore_d</code> to the hole that grips a pin snugly. Push the pins in from below.</li>
+</ul>
+
 <h2>Edge clamp</h2>
 <figure>
 <a href="media/edge_clamp_turntable.mp4"><img src="media/edge_clamp.jpg" alt="Orange edge clamp on a Feather RP2040 RESET button"></a>
@@ -63,17 +74,6 @@ footer { margin-top:56px; color:var(--mute); font-size:.85rem; }
 <tr><td><a href="https://www.adafruit.com/product/4559">Pre-Cut Heat Shrink Pack</a> (4559)</td><td>Insulate the solder joints.</td></tr>
 <tr><td><a href="https://www.adafruit.com/product/4884">Feather RP2040</a> (4884)</td><td>The board shown in the videos.</td></tr>
 </table></div>
-
-<h2>How it works</h2>
-<figure>
-<a href="media/closeup_how_it_works.mp4"><img src="media/closeup.jpg" alt="Cutaway of the clip seated on a tact switch, pogo pins touching opposite corner pads"></a>
-<figcaption>Cutaway of the clip on the switch. Each glow color marks one pair of pads that are tied together inside the switch. Click for the video.</figcaption>
-</figure>
-<ul>
-<li>The clip registers on the switch body and holds two pogo pins on opposite corner pads. The two pads on each side of a tact switch are tied together inside, so diagonal corners are the two sides of the switch.</li>
-<li>A window over the plunger means the clip itself never presses the button.</li>
-<li>Print <code>bore_coupon.3mf</code> first and set <code>bore_d</code> to the hole that grips a pin snugly. Push the pins in from below.</li>
-</ul>
 
 <h2>Button reference</h2>
 <p>Distance from each button center to the nearest board edge and mounting hole, from the Adafruit Eagle files. "Row" is the board number in the FreeCAD <code>Params</code> sheet.</p>
