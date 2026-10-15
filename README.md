@@ -11,6 +11,8 @@ George Jetson's job at Spacely Sprockets was digital index operator: he pressed 
 | [![Edge clamp](docs/media/edge_clamp.jpg)](docs/media/edge_clamp_turntable.mp4) | [![Hole mount](docs/media/hole_mount.jpg)](docs/media/hole_mount_turntable.mp4) |
 | Clamps the nearest board edge. Works on every board. | Screws through a mounting hole (M2.5 Feather, M3 Metro). |
 
+[How it works (video)](docs/media/closeup_how_it_works.mp4): cutaway of the clip on the switch.
+
 ## Files
 
 - `3mf/` ready to print. Start with `3mf/fitted/` and `3mf/bore_coupon.3mf`.
