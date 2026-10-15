@@ -1,5 +1,7 @@
 # Digital Index Operator
 
+Idea by Scott Shawcroft ([@tannewt](https://github.com/tannewt)).
+
 3D printed clips that hold two pogo pins on a board's RESET or BOOT button, so a test rig can press it with a relay.
 
 George Jetson's job at Spacely Sprockets was digital index operator: he pressed one button all day. These clips do the same for hardware-in-the-loop testing.
