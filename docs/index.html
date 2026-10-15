@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digital Index Operator</title>
+<meta name="description" content="3D printed pogo pin clips that let a test rig press the RESET and BOOT buttons on Adafruit boards.">
+<style>
+:root { --bg:#fafafa; --fg:#1d1d1f; --mute:#5f6368; --line:#e3e3e3; --card:#fff; --accent:#d4561a; }
+@media (prefers-color-scheme: dark) { :root { --bg:#141416; --fg:#ececec; --mute:#a0a4a8; --line:#2c2c30; --card:#1c1c1f; --accent:#ff8a4c; } }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+main { max-width:960px; margin:0 auto; padding:32px 16px 64px; }
+h1 { font-size:2rem; margin:0 0 4px; }
+h2 { margin:48px 0 12px; font-size:1.4rem; }
+p.lede { color:var(--mute); margin:0 0 8px; }
+a { color:var(--accent); }
+figure { margin:0; }
+figure a img { width:100%; border-radius:10px; border:1px solid var(--line); display:block; }
+figcaption { color:var(--mute); font-size:.92rem; margin-top:6px; }
+table { width:100%; border-collapse:collapse; font-size:.9rem; }
+th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+th { font-weight:600; }
+.scroll { overflow-x:auto; }
+code { font-size:.9em; }
+ul { padding-left:20px; }
+footer { margin-top:56px; color:var(--mute); font-size:.85rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>Digital Index Operator</h1>
+<p class="lede">3D printed clips that hold two pogo pins on a board's RESET or BOOT button, so a test rig can press it with a relay.</p>
+<p>George Jetson's job at Spacely Sprockets was digital index operator: he pressed one button all day. These clips do the same for hardware-in-the-loop testing.</p>
+
+<h2>Edge clamp</h2>
+<figure>
+<a href="media/edge_clamp_turntable.mp4"><img src="media/edge_clamp.jpg" alt="Orange edge clamp on a Feather RP2040 RESET button"></a>
+<figcaption>Clamps the nearest board edge. Works on every board, including QT Py and ItsyBitsy. Click for the video.</figcaption>
+</figure>
+
+<h2>Hole mount</h2>
+<figure>
+<a href="media/hole_mount_turntable.mp4"><img src="media/hole_mount.jpg" alt="Blue hole mount clip on a Feather RP2040 RESET button"></a>
+<figcaption>Screws through the nearest mounting hole (M2.5 on Feather, M3 on Metro). Click for the video.</figcaption>
+</figure>
+
+<h2>Files</h2>
+<ul>
+<li><a href="https://github.com/mikeysklar/digital-index-operator/tree/main/3mf">3MF files</a> ready to print, one per board button and one per switch type. Start with <code>3mf/fitted/</code> and <code>3mf/bore_coupon.3mf</code>.</li>
+<li><a href="https://github.com/mikeysklar/digital-index-operator/tree/main/freecad">FreeCAD files</a> (FreeCAD 1.1). Both designs are parametric: pick a board row or switch type in the <code>Params</code> sheet, or type your own edge distance or hole position, and the clip regenerates. Fit values such as bore size and clearance live there too.</li>
+</ul>
+
+<h2>Parts from Adafruit</h2>
+<div class="scroll"><table>
+<tr><th>Part</th><th>Why</th></tr>
+<tr><td><a href="https://www.adafruit.com/product/2430">Pogo Pins "Needle Head" P75-B1</a> (2430)</td><td>The contact. 1.0 mm body, 0.7 mm tip, small enough to land on the pads of a 4.2 mm tact switch. Two per clip.</td></tr>
+<tr><td><a href="https://www.adafruit.com/product/2429">Pogo Pins "Crown Head" P75-H2</a> (2429)</td><td>Optional. Better grip on the larger 6 mm switch pads used on Metros.</td></tr>
+<tr><td><a href="https://www.adafruit.com/product/3299">M2.5 Nylon Screw and Stand-off Set</a> (3299)</td><td>Hole mount on Feathers: M2.5 x 10 screw and nut.</td></tr>
+<tr><td><a href="https://www.adafruit.com/product/4685">M3 Nylon Screw and Stand-off Set</a> (4685)</td><td>Hole mount on Metros: M3 x 10 screw and nut.</td></tr>
+<tr><td><a href="https://www.adafruit.com/product/2051">Silicone Cover Stranded Wire 30AWG</a> (2051)</td><td>Solder to the pogo pin tails.</td></tr>
+<tr><td><a href="https://www.adafruit.com/product/4409">STEMMA Non-Latching Mini Relay</a> (4409)</td><td>Closes the two wires to press the button from any microcontroller.</td></tr>
+<tr><td><a href="https://www.adafruit.com/product/4559">Pre-Cut Heat Shrink Pack</a> (4559)</td><td>Insulate the solder joints.</td></tr>
+<tr><td><a href="https://www.adafruit.com/product/4884">Feather RP2040</a> (4884)</td><td>The board shown in the videos.</td></tr>
+</table></div>
+
+<h2>How it works</h2>
+<ul>
+<li>The clip registers on the switch body and holds two pogo pins on opposite corner pads. The two pads on each side of a tact switch are tied together inside, so diagonal corners are the two sides of the switch.</li>
+<li>A window over the plunger means the clip itself never presses the button.</li>
+<li>Print <code>bore_coupon.3mf</code> first and set <code>bore_d</code> to the hole that grips a pin snugly. Push the pins in from below.</li>
+</ul>
+
+<h2>Button reference</h2>
+<p>Distance from each button center to the nearest board edge and mounting hole, from the Adafruit Eagle files. "Row" is the board number in the FreeCAD <code>Params</code> sheet.</p>
+<div class="scroll"><table>
+<tr><th>Board</th><th>Button</th><th>Ref</th><th>Switch</th><th>Side</th><th>Nearest edge</th><th>Nearest hole</th><th>Row</th></tr>
+<tr><td>Feather RP2040 rev D</td><td>RESET</td><td>SW1</td><td>KMR2</td><td>top</td><td>6.41 mm (bottom)</td><td>10.1 mm (M2.5)</td><td>1</td></tr>
+<tr><td>Feather RP2040 rev D</td><td>BOOT</td><td>SW3</td><td>RA_MINI</td><td>top</td><td>1.65 mm (right)</td><td>5.1 mm (M2.5)</td><td>2</td></tr>
+<tr><td>ESP32-S3 TFT Feather Rev D</td><td>RESET</td><td>SW2</td><td>RKB2</td><td>bottom</td><td>6.22 mm (bottom)</td><td>7.5 mm (M2.5)</td><td>3</td></tr>
+<tr><td>ESP32-S3 TFT Feather Rev D</td><td>BOOT</td><td>SW1</td><td>RKB2</td><td>bottom</td><td>6.22 mm (bottom)</td><td>11.8 mm (M2.5)</td><td>4</td></tr>
+<tr><td>Adafruit Feather nRF52840 Rev E</td><td>RESET</td><td>SW1</td><td>RKB2</td><td>top</td><td>6.22 mm (bottom)</td><td>37.3 mm (M2.5)</td><td>5</td></tr>
+<tr><td>Adafruit Feather nRF52840 Rev E</td><td>USER</td><td>SW2</td><td>RKB2</td><td>top</td><td>6.17 mm (bottom)</td><td>18.7 mm (M2.5)</td><td>6</td></tr>
+<tr><td>Feather M4 AirLift rev A</td><td>RESET</td><td>SW1</td><td>KMR2</td><td>top</td><td>6.54 mm (bottom)</td><td>7.9 mm (M2.5)</td><td>7</td></tr>
+<tr><td>ItsyBitsy M4 rev D</td><td>RESET</td><td>SW1</td><td>RKB2</td><td>top</td><td>5.22 mm (right)</td><td>none</td><td>8</td></tr>
+<tr><td>ItsyBitsy RP2040 rev C1</td><td>RESET</td><td>SW2</td><td>KMR2</td><td>top</td><td>4.95 mm (bottom)</td><td>none</td><td>9</td></tr>
+<tr><td>ItsyBitsy RP2040 rev C1</td><td>BOOT</td><td>SW3</td><td>KMR2</td><td>top</td><td>4.95 mm (top)</td><td>none</td><td>10</td></tr>
+<tr><td>QT Py RP2040 rev B</td><td>BOOT</td><td>SW2</td><td>RKB2</td><td>top</td><td>5.16 mm (left)</td><td>none</td><td>11</td></tr>
+<tr><td>QT Py RP2040 rev B</td><td>RESET</td><td>SW1</td><td>RKB2</td><td>top</td><td>2.79 mm (bottom)</td><td>none</td><td>12</td></tr>
+<tr><td>QT Py ESP32-S3 rev C</td><td>RESET</td><td>RESET</td><td>RKB2</td><td>top</td><td>6.10 mm (left)</td><td>none</td><td>13</td></tr>
+<tr><td>QT Py ESP32-S3 rev C</td><td>BOOT</td><td>BOOT</td><td>RKB2</td><td>top</td><td>6.10 mm (left)</td><td>none</td><td>14</td></tr>
+<tr><td>Metro ESP32-S3 rev B</td><td>RESET</td><td>SW3</td><td>RA_METRO</td><td>top</td><td>1.71 mm (top)</td><td>14.0 mm (M3)</td><td>15</td></tr>
+<tr><td>Metro ESP32-S3 rev B</td><td>BOOT</td><td>SW1</td><td>RKB2</td><td>top</td><td>14.48 mm (right)</td><td>26.2 mm (M3)</td><td>16</td></tr>
+<tr><td>Metro M4 AirLift rev B1</td><td>RESET</td><td>RESET</td><td>6x6_SMT</td><td>top</td><td>3.81 mm (top)</td><td>9.0 mm (M3)</td><td>17</td></tr>
+<tr><td>Metro Express rev H</td><td>RESET</td><td>RESET</td><td>6x6_SMT</td><td>top</td><td>3.94 mm (top)</td><td>9.0 mm (M3)</td><td>18</td></tr>
+<tr><td>Metro Amethyst rev D</td><td>RESET</td><td>SW2</td><td>RA_METRO</td><td>top</td><td>1.78 mm (left)</td><td>13.9 mm (M3)</td><td>19</td></tr>
+<tr><td>Metro Amethyst rev D</td><td>BOOT</td><td>SW3</td><td>RA_METRO</td><td>top</td><td>4.32 mm (right)</td><td>7.8 mm (M3)</td><td>20</td></tr>
+</table></div>
+
+<footer>MIT-0 license. Board models from <a href="https://github.com/adafruit/Adafruit_CAD_Parts">Adafruit_CAD_Parts</a>. Source on <a href="https://github.com/mikeysklar/digital-index-operator">GitHub</a>.</footer>
+</main>
+</body>
+</html>

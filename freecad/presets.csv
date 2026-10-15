@@ -1,0 +1,19 @@
+param,KMR2,RKB2,KMR2_SLIM,EVQQ2_6x6,EVQQ2_SMALLER,6x6_SMT,RA_METRO,RA_MINI,note
+index,1,2,3,4,5,6,7,8,value of Params.preset that selects this column
+example_boards,"Feather M4 AirLift / RP2040 / 32u4, ItsyBitsy RP2040 / M4 rev A-C, QT Py ESP32-S2 rev A","Feather ESP32-S3 TFT, Feather nRF52840 rev E, ItsyBitsy M4 rev D, QT Py RP2040 rev B, QT Py ESP32-S3 rev C, Metro ESP32-S3 BOOT",QT Py ESP32-C3 rev A,"Metro M0 Express rev D-G, Metro 32u4, Metro nRF52","Metro M4 AirLift rev B, Metro RP2040 AirLift, Metro M7 AirLift","Metro Express rev H, Metro M4 AirLift rev B1, Metro M7 SD","Metro ESP32-S2/S3, Metro RP2350 (Amethyst), Metro ESP32-P4",Feather RP2040 rev D (BOOT side switch),
+eagle_pkg,BTN_KMR2_4.6X2.8,BTN_RKB2_4.6X2.8,BTN_KMR2_SLIM,EVQ-Q2,EVQ-Q2_SMALLER,6MM_SMT / 6MMX6MM_TACTILE_SMT,SPST_TACTILE_RA,SPST_TACTILE_RA_2*4*3.5MM,
+part,C&K KMR2 (KMR211G etc),G-Switch GT-TC048D-H025-L1 (LCSC C843674),C&K KMR2 (slim pads),Panasonic EVQ-Q2x03W,Panasonic EVQ-Q2x03W,generic 6x6x5 SMD (Adafruit 3983),unknown RA tact,unknown 2x4x3.5 RA tact,
+body_l,4.2,4.2,4.2,6.5,6.5,6.0,7.0,5.0,X (along tied pad pairs). KMR2 datasheet 4.2; EVQQ2 datasheet 6.5; RA from Eagle tPlace
+body_w,2.8,3.2,2.8,6.0,6.0,6.0,3.4,3.6,Y. KMR2 body 2.2 but 2.8 overall incl. terminals so pocket clears 2.8; RKB2 LCSC 3.2
+body_cy,0,0,0,0,0,0,-0.7,-0.68,Y offset of body center from footprint origin (RA bodies are off-center)
+body_h,1.4,1.5,1.4,1.8,1.8,3.4,3.5,3.5,housing top above PCB. KMR2 1.4 and EVQQ2 1.8 from datasheets; RKB2 6x6 RA ASSUMED
+plunger_d,1.6,1.6,1.6,3.8,3.8,3.5,0,0,0 = side actuated (no roof window). KMR2/RKB2 actuator not dimensioned in datasheet: ASSUMED
+plunger_h,1.9,2.5,1.9,3.1,3.1,5.0,0,0,free plunger top. KMR2 1.9 (G) datasheet; RKB2 2.5 LCSC; EVQQ2 03 variant 3.1; 6x6 Adafruit 3983 5.0
+pad_x,2.05,1.973,2.05,3.4,3.1,3.3,3.1,1.675,abs center X of pads (Eagle .brd)
+pad_y,0.8,1.075,0.825,2.0,2.0,2.2,0.9,1.042,abs center Y of pads (Eagle .brd). RA_METRO: the -Y pads (y=-0.9) that stick out past the body X ends
+pad_lx,0.9,1.0,0.9,3.2,2.0,2.0,1.75,1.3,
+pad_ly,0.9,0.7,0.85,1.2,1.2,1.2,1.0,1.1,
+c1_x,2.45,2.45,2.45,4.1,3.7,3.7,3.85,1.675,pogo 1 tip target. Top switches: (+X end, +Y pad)
+c1_y,0.8,1.075,0.825,2.0,2.0,2.2,-0.9,1.47,
+c2_x,-2.45,-2.45,-2.45,-4.1,-3.7,-3.7,-3.85,-1.675,pogo 2 tip target. Top switches: diagonal (-X end, -Y pad) since same-Y pads are tied internally
+c2_y,-0.8,-1.075,-0.825,-2.0,-2.0,-2.2,-0.9,1.47,RA: ASSUMED signal pads. RA_METRO uses the -Y pads that stick out past the body sides because its plunger faces +Y over the +Y pads; RA_MINI uses its +Y pads behind the body (plunger faces -Y). Verify with a meter.

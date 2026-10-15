@@ -1,0 +1,21 @@
+board,ref,value,preset,side,edge,edge_dist,edge_angle,hole_dx,hole_dy,hole_d,hole_dist
+Feather RP2040 rev D,SW1,KMR2,KMR2,top,bottom,6.41,90.0,9.27,3.87,2.5,10.05
+Feather RP2040 rev D,SW3,Mini RA Switch,RA_MINI,top,right,1.65,270.0,5.02,0.89,2.54,5.1
+ESP32-S3 TFT Feather Rev D,SW2,RKB2,RKB2,bottom,bottom,6.22,0.0,3.68,-6.48,2.5,7.45
+ESP32-S3 TFT Feather Rev D,SW1,RKB2,RKB2,bottom,bottom,6.22,0.0,3.68,-11.18,2.5,11.77
+Adafruit Feather nRF52840 Rev E,SW1,RKB2,RKB2,top,bottom,6.22,270.0,37.16,-3.68,2.54,37.34
+Adafruit Feather nRF52840 Rev E,SW2,RKB2,RKB2,top,bottom,6.17,270.0,18.33,-3.63,2.54,18.69
+Feather M4 AirLift rev A,SW1,KMR2,KMR2,top,bottom,6.54,90.0,6.86,4.0,2.5,7.94
+ItsyBitsy M4 rev D,SW1,RKB,RKB2,top,right,5.22,90.0,,,,
+ItsyBitsy RP2040 rev C1,SW2,KMR2,KMR2,top,bottom,4.95,90.0,,,,
+ItsyBitsy RP2040 rev C1,SW3,KMR2,KMR2,top,top,4.95,270.0,,,,
+QT Py RP2040 rev B,SW2,KMR2,RKB2,top,left,5.16,90.0,,,,
+QT Py RP2040 rev B,SW1,KMR2,RKB2,top,bottom,2.79,180.0,,,,
+QT Py ESP32-S3 rev C,RESET,RKB2,RKB2,top,left,6.1,0.0,,,,
+QT Py ESP32-S3 rev C,BOOT,RKB2,RKB2,top,left,6.1,0.0,,,,
+Metro ESP32-S3 rev B,SW3,RA_TACT,RA_METRO,top,top,1.71,90.0,3.43,-13.53,3.2,13.96
+Metro ESP32-S3 rev B,SW1,RKB2,RKB2,top,right,14.48,180.0,3.3,26.04,3.2,26.25
+Metro M4 AirLift rev B1,RESET,6mmTact,6x6_SMT,top,top,3.81,270.0,-8.89,-1.27,3.175,8.98
+Metro Express rev H,RESET,EVQQ 6mm,6x6_SMT,top,top,3.94,270.0,-8.89,-1.4,3.2,9.0
+Metro Amethyst rev D,SW2,SW_RA,RA_METRO,top,left,1.78,90.0,3.3,-13.46,3.175,13.86
+Metro Amethyst rev D,SW3,SW_RA,RA_METRO,top,right,4.32,90.0,7.62,1.78,3.175,7.83

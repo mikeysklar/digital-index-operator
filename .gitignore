@@ -1,0 +1,4 @@
+stl/
+__pycache__/
+*.FCBak
+freecad/common/head_demo.FCStd
